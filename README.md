@@ -9,6 +9,9 @@ Local PHP + MySQL app for XAMPP. No internet required at runtime — Bootstrap &
 3. Open `http://localhost/phpmyadmin`, click **Import**, choose
    `database/security_incident_db.sql`, and run it.
 4. Visit `http://localhost/security-incident-system/`.
+5. 5. Login:
+   - **Username:** `admin`
+   - **Password:** `admin123`
 
 ## Features
 
