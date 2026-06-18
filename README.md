@@ -9,12 +9,6 @@ Local PHP + MySQL app for XAMPP. No internet required at runtime — Bootstrap &
 3. Open `http://localhost/phpmyadmin`, click **Import**, choose
    `database/security_incident_db.sql`, and run it.
 4. Visit `http://localhost/security-incident-system/`.
-5. Login:
-   - **Username:** `admin`
-   - **Password:** `admin123`
-
-> The app will auto-create / repair the admin user on first DB connection
-> (see `includes/db.php`), so login always works after import.
 
 ## Features
 
@@ -36,16 +30,6 @@ Local PHP + MySQL app for XAMPP. No internet required at runtime — Bootstrap &
 - HTML output escaped via `htmlspecialchars`
 - Whitelisted sort columns in AJAX endpoint
 
-## Offline assets (optional)
-
-To run with zero internet, download these files into `assets/vendor/` and
-swap the CDN `<link>`/`<script>` tags in `includes/header.php`,
-`includes/footer.php`, and `login.php`:
-
-- bootstrap.min.css, bootstrap.bundle.min.js (Bootstrap 5.3.3)
-- bootstrap-icons.min.css + the `fonts/` folder (Bootstrap Icons 1.11.3)
-- chart.umd.min.js (Chart.js 4.4.1)
-
 ## Folder structure
 
 ```
@@ -60,3 +44,5 @@ security-incident-system/
 ├── includes/{db,auth,functions,header,sidebar,footer}.php
 └── database/security_incident_db.sql
 ```
+## github link
+https://github.com/OpenSourceAssignmentCSDFE08/OpenSource_Assignment_CSDFE_08.git
