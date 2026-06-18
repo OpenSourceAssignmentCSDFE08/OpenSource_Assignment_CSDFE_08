@@ -25,10 +25,6 @@ Local PHP + MySQL app for XAMPP. No internet required at runtime — Bootstrap &
 
 - PDO prepared statements throughout
 - `password_hash` / `password_verify`
-- CSRF token validated on all POSTs
-- Session regenerated on login, HttpOnly cookies, 30-min inactivity timeout
-- HTML output escaped via `htmlspecialchars`
-- Whitelisted sort columns in AJAX endpoint
 
 ## Folder structure
 
