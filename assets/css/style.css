@@ -1,0 +1,71 @@
+/* SIEMS — Cybersecurity dashboard theme */
+:root{
+  --bg:#0b1020; --bg-2:#0f1733; --panel:#121a3a; --line:#1f2a55;
+  --text:#e6ecff; --muted:#9aa7d3; --neon:#00ff9c; --neon-2:#22d3ee;
+  --danger:#ff4d6d; --warn:#ffcc00; --ok:#22c55e; --info:#60a5fa;
+}
+[data-bs-theme="light"]{
+  --bg:#f4f6fb; --bg-2:#ffffff; --panel:#ffffff; --line:#e3e8f3;
+  --text:#0b1020; --muted:#5b6885; --neon:#00b377;
+}
+html,body{background:var(--bg);color:var(--text);min-height:100%}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,sans-serif}
+.text-neon{color:var(--neon)!important}
+.btn-neon{background:linear-gradient(135deg,var(--neon),var(--neon-2));color:#03110a;border:0;font-weight:600}
+.btn-neon:hover{filter:brightness(1.1);color:#03110a}
+
+/* Layout */
+.app-shell{display:flex;min-height:100vh}
+.sidebar{width:240px;background:linear-gradient(180deg,#0a1130,#0b1020);border-right:1px solid var(--line);position:sticky;top:0;height:100vh;display:flex;flex-direction:column;padding:18px 0}
+.sidebar .brand{font-size:1.3rem;font-weight:700;padding:0 18px 18px;border-bottom:1px solid var(--line);margin-bottom:12px;letter-spacing:1px}
+.sidebar .nav-link{color:var(--muted);padding:10px 18px;border-left:3px solid transparent;display:flex;align-items:center;gap:10px;transition:.2s}
+.sidebar .nav-link:hover{color:var(--text);background:rgba(255,255,255,.03)}
+.sidebar .nav-link.active{color:var(--neon);background:rgba(0,255,156,.06);border-left-color:var(--neon)}
+.sidebar-footer{margin-top:auto;padding-top:12px}
+.app-main{flex:1;display:flex;flex-direction:column;min-width:0}
+.topbar{display:flex;align-items:center;gap:10px;padding:12px 20px;background:var(--bg-2);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.content-wrap{padding:22px}
+
+/* Cards */
+.card{background:var(--panel);border:1px solid var(--line);color:var(--text);border-radius:14px}
+.card h6{color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-size:.78rem}
+.stat-card{display:flex;align-items:center;gap:14px;padding:16px;background:var(--panel);border:1px solid var(--line);border-radius:14px;transition:.2s;overflow:hidden;position:relative}
+.stat-card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.35)}
+.stat-icon{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;background:rgba(255,255,255,.05)}
+.stat-label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.stat-value{font-size:1.6rem;font-weight:700}
+.stat-primary .stat-icon{color:var(--info)}
+.stat-danger .stat-icon{color:var(--danger)}
+.stat-warning .stat-icon{color:var(--warn)}
+.stat-success .stat-icon{color:var(--ok)}
+.stat-info .stat-icon{color:var(--neon-2)}
+.stat-neon .stat-icon{color:var(--neon)}
+
+/* Tables */
+.table{color:var(--text)}
+.table thead th{color:var(--muted);border-bottom-color:var(--line);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.table>:not(caption)>*>*{background:transparent;border-bottom-color:var(--line)}
+.form-control,.form-select,.input-group-text{background:var(--bg-2);border-color:var(--line);color:var(--text)}
+.form-control:focus,.form-select:focus{background:var(--bg-2);color:var(--text);border-color:var(--neon);box-shadow:0 0 0 .15rem rgba(0,255,156,.15)}
+
+/* Login */
+.login-body{min-height:100vh;display:grid;place-items:center;background:#05070f;position:relative;overflow:hidden}
+.login-bg{position:absolute;inset:0;background:
+ radial-gradient(800px 400px at 10% 10%,rgba(0,255,156,.12),transparent 60%),
+ radial-gradient(700px 350px at 90% 80%,rgba(34,211,238,.12),transparent 60%);}
+.login-card{width:380px;max-width:92vw;background:var(--panel);border:1px solid var(--line);color:var(--text);position:relative;z-index:1}
+.login-logo{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;margin:0 auto;font-size:1.8rem;background:linear-gradient(135deg,var(--neon),var(--neon-2));color:#03110a}
+
+/* Email content highlight */
+.kw-highlight{background:rgba(255,77,109,.18);color:#ff4d6d;padding:1px 4px;border-radius:4px;font-weight:600}
+.email-content{background:var(--bg-2);max-height:360px;overflow:auto}
+
+/* Pagination */
+.pagination .page-link{background:var(--bg-2);border-color:var(--line);color:var(--text)}
+.pagination .page-item.active .page-link{background:var(--neon);border-color:var(--neon);color:#03110a}
+
+/* Mobile */
+@media (max-width: 768px){
+  .sidebar{position:fixed;left:-260px;transition:.3s;z-index:20}
+  .sidebar.open{left:0}
+}
