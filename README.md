@@ -24,14 +24,8 @@ Local PHP + MySQL app for XAMPP. No internet required at runtime — Bootstrap &
 - Dark / Light theme toggle, sidebar layout, responsive mobile design
 - Cyber theme: dark blue, black, neon green, white
 
-## Security
-
-- PDO prepared statements throughout
-- `password_hash` / `password_verify`
 
 ## Folder structure
-
-```
 security-incident-system/
 ├── index.php
 ├── login.php  logout.php
