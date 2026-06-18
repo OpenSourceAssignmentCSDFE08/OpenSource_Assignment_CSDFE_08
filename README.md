@@ -24,6 +24,50 @@ Local PHP + MySQL app for XAMPP. No internet required at runtime — Bootstrap &
 - Dark / Light theme toggle, sidebar layout, responsive mobile design
 - Cyber theme: dark blue, black, neon green, white
 
+## LIST OF GIT COMMAD USED
+Create / Initialize Repository
+git init
+Connect to GitHub Repository
+git remote add origin https://github.com/CYBER/OpenSource_Assignment_Program_Group08.git
+git remote -v
+Create and Commit README.md
+touch README.md
+git add README.md
+git commit -m "Added README file with project details"
+First Push to GitHub
+git branch -M main
+git push -u origin main
+Project Development Commits (minimum 5 commits)
+Example workflow:
+After creating a feature (e.g. student registration form)
+git add .
+git commit -m "Added student registration module"
+After adding display feature
+git add .
+git commit -m "Implemented student record display feature"
+After adding search feature
+git add .
+git commit -m "Added student search functionality"
+After database connection
+git add .
+git commit -m "Connected project to MySQL database"
+After UI improvement
+git add .
+git commit -m "Improved UI using Bootstrap"
+Create and Work on Development Branch
+Create branch:
+git branch development
+git switch -c development
+Add Feature in Development Branch
+git add .
+git commit -m "Added new feature in development branch"
+Switch Back to Main Branch
+git switch main
+Merge Development Branch into Main
+git merge development
+Push All Changes to GitHub
+git push origin main
+git push origin development
 
 ## Folder structure
 security-incident-system/
